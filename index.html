@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async Odyssey - TheMealDB Explorer</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <h1>Async Odyssey: Culinary Explorer</h1>
+      <p class="subtitle">Consumo asíncrono con Fetch API, ES Modules y Caching</p>
+    </header>
+
+    <main class="app-main">
+      <section class="controls-section">
+        <form id="search-form" class="search-form">
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Buscar recetas (ej. chicken, pasta, beef)..."
+            required
+            autocomplete="off"
+          />
+          <button type="submit" id="search-btn">Buscar</button>
+        </form>
+
+        <div class="filters-bar">
+          <label for="category-filter">Filtrar por Área:</label>
+          <select id="category-filter" disabled>
+            <option value="ALL">Todas las áreas</option>
+          </select>
+        </div>
+      </section>
+
+      <section id="metrics-container" class="metrics-container"></section>
+      <section id="status-container" class="status-container" aria-live="polite"></section>
+      <section id="results-grid" class="results-grid"></section>
+    </main>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
